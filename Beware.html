@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATHWISE Services Pvt.Ltd</title>
+  <link style="border-radius: 20px;" rel="icon" type="image/x-icon" href="only logo-01.jpg">
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: "futura md bt";
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: whitesmoke;
+  }
+
+  header {
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    background: white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add shadow */
+    transition: box-shadow 0.3s ease;
+    /* Smooth transition for shadow */
+  }
+
+  .logo img {
+    width: 100%;
+    /* Make the logo responsive */
+    max-width: 350px;
+    /* Set maximum width for the logo */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Ensure image doesn't affect layout */
+  }
+
+
+  header nav ul {
+    display: flex;
+    z-index: 1000px;
+  }
+
+  header nav ul li a {
+    display: inline-block;
+    color: black;
+    padding: 5px 0;
+    margin: 0 10px;
+    border: 3px solid transparent;
+    text-transform: uppercase;
+    transition: 0.2s;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  header nav ul li a:hover,
+  header nav ul li a.active {
+    border-bottom-color: #ff9933;
+  }
+
+  .hamburger {
+    cursor: pointer;
+    display: none;
+  }
+
+  .hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #000;
+  }
+
+  @media only screen and (max-width: 900px) {
+    header {
+      padding: 0 30px;
+      top: 0px;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .hamburger {
+      display: block;
+    }
+
+    header nav {
+      position: absolute;
+      width: 100%;
+      left: -100%;
+      top: 0px;
+      width: 100%;
+      background: white;
+      padding: 30px;
+      transition: 0.3s;
+    }
+
+    header #nav_check:checked~nav {
+      left: 0;
+    }
+
+    header nav ul {
+      display: block;
+    }
+
+    header nav ul li a {
+      margin: 5px 0;
+    }
+  }
+
+  .bewareContent {
+    text-align: justify;
+    padding: 5% 10%;
+    background-color: whitesmoke;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 2.5em;
+  }
+
+  p {
+    padding-bottom: 5%;
+    line-height: 1.5;
+  }
+
+  h4 {
+    margin-top: 5%;
+    font-size: 1.2em;
+  }
+
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .bewareContent {
+      padding: 10% 5%;
+
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+  }
+
+
+  /* Footer Content */
+  .container {
+    max-width: 1170px;
+    margin: auto;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .footer {
+    background-color: #EAEAEA;
+    padding: 30px 0;
+  }
+
+  .footer-col {
+    width: 25%;
+    padding: 0 15px;
+  }
+
+  .footer-col h4 {
+    font-size: 18px;
+    color: black;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #ff9933;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+
+  .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+    color: black;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  .footer-col ul li a:hover {
+    color: #ff9933;
+    padding-left: 8px;
+  }
+
+  .footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    /* background-color: rgba(255,255,255,0.2); */
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    /* color: #ffffff; */
+    transition: all 0.5s ease;
+  }
+
+  .footer-col .social-links a:hover {
+    color: #ff9933;
+    background-color: #ffffff;
+  }
+
+  /*responsive*/
+  @media(max-width: 767px) {
+    .footer-col {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media(max-width: 574px) {
+    .footer-col {
+      width: 100%;
+    }
+  }
+
+  .footerr {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+    /* Adjust padding as needed */
+  }
+
+  #left,
+  #right {
+    margin: 0;
+    /* Reset default margin */
+  }
+
+  @media (max-width: 600px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #left,
+    #right {
+      margin: 10px 0;
+      /* Adjust margin for smaller screens */
+      text-align: center;
+      /* Center text for smaller screens */
+    }
+  }
+</style>
+
+<body>
+
+  <header>
+    <div class="logo"><img style="width: 50%;" src="logo.png" alt=""></div>
+    <input type="checkbox" id="nav_check" hidden>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html" class="active">HOME</a>
+        </li>
+        <li>
+          <a href="about.html">ABOUT</a>
+        </li>
+        <li>
+          <a href="Services.html">SERVICES</a>
+        </li>
+        <li>
+          <a href="contact.html">CONTACT</a>
+        </li>
+        <!-- <li style="background-color: yellow;">
+                <a  href="">Get Enquiry</a>
+                </li> -->
+      </ul>
+    </nav>
+    <label for="nav_check" class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </label>
+  </header>
+
+  <div class="bewareContent">
+    <h1>Hello Startups, beware of scams!</h1>
+    <p>Hello Founders & Startups!</p>
+    <p>Embarking on the entrepreneurial voyage parallels sailing through uncharted waters—a journey filled with
+      excitement yet shrouded in uncertainty. In this vast ocean of aspirations, countless promises flood your channels,
+      offering the world on a platter only to vanish like fleeting mirages. Among these tempting offers are claims of
+      securing government grants and tax exemptions, with hefty fees attached for their supposed services. Yet, the
+      stark reality remains: the likelihood of actually receiving such benefits is a mere 3%, leaving many entrepreneurs
+      adrift in a sea of false hope.</p>
+
+    <p>Amidst this turbulent landscape, Atwise Services emerges as a beacon of truth and transparency. Unlike others,
+      we eschew false promises, opting instead to provide clear guidance rooted in honesty. We understand the risks
+      inherent in building dreams upon the uncertain sands of speculation. Thus, our mission is simple: to empower
+      entrepreneurs with realistic expectations and genuine support.</p>
+
+    <p>At Atwise Services, we don't just offer services; we forge partnerships. We recognize the emotional
+      rollercoaster that accompanies launching a startup and pledge to stand by you every step of the way. Our
+      commitment is unwavering: to navigate you through the complexities of government grants and tax exemptions with
+      integrity and clarity.</p>
+
+    <p>Your dream is our shared vision, and we're dedicated to fostering its growth on solid ground. Together, let's
+      script your success story—one founded on the bedrock of honesty and determination. With Atwise Services as your
+      trusted ally, the journey ahead promises not just hope, but tangible progress towards your entrepreneurial
+      aspirations.</p>
+
+    <p>Wishing you the very best,</p>
+    <h3>Warm Regards,</h3>
+    <h4>Managing Director</h4>
+    <h5>Mr.Tarun Sadhu </h5>
+    <h5>Mr.Akash Nimje </h5>
+    <h5>Mr.Ashokbhai S Hedau</h5>
+    <h4>ATWISE SERVICES PRIVATE LIMITED</h4>
+  </div>
+
+
+  <footer class="footer">
+    <div style="padding-bottom: 12px;" class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="Beware.html">Beware of scams!</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Terms & Policy</h4>
+          <ul>
+            <li><a href="Terms&Conditions.html">Terms & Conditions</a></li>
+            <li><a href="Privcy&policy.html">Privacy Policy</a></li>
+            <li><a href="RefundPolicy.html">Refund Policy</a></li>
+            <li><a href="#">Confidentiality Policy</a></li>
+
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Address</h4>
+          <ul>
+
+            <li><a href="">
+                <p>Office No - 603, 3rd Eye Vision, Opp.Shivalik Plaza, Panjarapole, IIM Road, Ahmedabad-380015</p>
+              </a></li>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3671.8738349494342!2d72.54100917531395!3d23.02840417916976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDAxJzQyLjMiTiA3MsKwMzInMzYuOSJF!5e0!3m2!1sen!2sin!4v1709834402273!5m2!1sen!2sin"
+              width="220" height="170" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61557711089061">
+              <img src="https://cdn.icon-icons.com/icons2/1/PNG/256/social_facebook_fb_35.png" height="30px" alt="">
+            </a>
+            <a href="https://www.instagram.com/athwiseservices/"> <img
+                src="https://cdn.icon-icons.com/icons2/2428/PNG/96/instagram_black_logo_icon_147122.png" height="30px"
+                alt=""> </a>
+            <a href="https://twitter.com/athwise1713"> <img
+                src="https://cdn.icon-icons.com/icons2/1/PNG/256/social_Twitter_38.png" height="30px" alt=""> </a>
+            <a href="https://www.linkedin.com/in/athwise-services-private-limited-9b26202b8/">
+              <img src="https://cdn.icon-icons.com/icons2/1/PNG/256/sociallinkedin_member_30.png" height="30px" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="footerr" style="padding-top: 20px;">
+      <p id="left">© 2024 ALL RIGHTS RESERVED</p>
+      <center></center>
+      <p id="right">ATHWISE SERVICES PVT.LTD.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

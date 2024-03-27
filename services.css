@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "futura md bt";
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+}
+
+
+
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+  background: white;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Add shadow */
+  transition: box-shadow 0.3s ease;
+  /* Smooth transition for shadow */
+}
+
+.logo img {
+  width: 100%;
+  /* Make the logo responsive */
+  max-width: 350px;
+  /* Set maximum width for the logo */
+  height: auto;
+  /* Maintain aspect ratio */
+  display: block;
+  /* Ensure image doesn't affect layout */
+}
+
+
+header nav ul {
+  display: flex;
+  z-index: 1000px;
+}
+
+header nav ul li a {
+  display: inline-block;
+  color: black;
+  padding: 5px 0;
+  margin: 0 10px;
+  border: 3px solid transparent;
+  text-transform: uppercase;
+  transition: 0.2s;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  border-bottom-color: #ff9933;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  margin: 5px 0;
+  background: #000;
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    padding: 0 30px;
+    top: 0px ;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .hamburger {
+    display: block;
+  }
+
+  header nav {
+    position: absolute;
+    width: 100%;
+    left: -100%;
+    top: 0px;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    transition: 0.3s;
+  }
+
+  header #nav_check:checked~nav {
+    left: 0;
+  }
+
+  header nav ul {
+    display: block;
+  }
+
+  header nav ul li a {
+    margin: 5px 0;
+  }
+}
+
+
+/* BAckGround Image */
+.background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bussiness.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+    margin-top: 30px;
+    color: white;
+    text-align: left;
+    width: 85%;
+    /* Set width to 80% for desktop */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .content {
+      width: 90%;
+      /* Set width to 90% for smaller screens */
+    }
+  }
+  
+  .content h1 {
+    font-size: 4.5rem;
+    
+  }
+  
+ 
+
+
+/* Our Services*/
+.cotentHeader{
+  text-align: center;
+  padding: 80px;
+}
+
+.containerr {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+
+.box {
+  width: calc(25% - 40px);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.box img {
+  aspect-ratio: 3/2;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.box h2 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.box p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.box button {
+  display: block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff9933;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+
+}
+
+.box button:hover {
+  background-color: #ef8a25;
+}
+
+@media only screen and (max-width: 768px) {
+  .box {
+    width: calc(50% - 40px);
+  }
+}
+
+
+  
+  /* Background Image */
+.midbackground {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Hand.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentt {
+    text-align: center;
+    color: white;
+    max-width: 80%; /* Set maximum width for content */
+}
+
+.contentt p {
+    color: rgb(198, 196, 196);
+    margin-bottom: 10px; /* Add margin bottom to separate paragraphs */
+}
+
+.contentt > a > button {
+    font-size: large;
+    color: white;
+    padding: 15px 25px;
+    background-color: #ff9933;
+    margin-top: 30px;
+}
+
+.contentt > a > button:hover {
+    background-color: #000;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .midbackground {
+        height: auto; /* Change height to auto for smaller screens */
+    }
+
+    .contentt {
+        padding: 20px; /* Add padding to the content for smaller screens */
+        
+    }
+}
+
+
+hr{
+  border: none; 
+    height: 2px; 
+    background-color:#ff9933; 
+    
+}
+
+.upperFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+.cardd {
+  flex: 1;
+  max-width: calc(33.33% - 20px);
+  /* background-color: white; */
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.socialhandal {
+  margin-right: 40px;
+}
+
+.socialhandal img {
+  width: 30px;
+  margin-top: 10px; /* Adjust margin-top for alignment */
+  float: right;
+  padding: 2px;
+}
+
+.service li {
+  margin: 12px;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-group button {
+  background-color:#ff9933;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: #ff9933;
+  transform: scale(1.1);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .cardd {
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardd {
+    max-width: calc(100% - 20px);
+  }
+  
+  .socialhandal img {
+    margin-top: 0;
+  }
+}
+
+
+/* Footer Content */
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #EAEAEA;
+    padding: 30px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: black;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #ff9933;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: black;
+	text-decoration: none;
+	font-weight: 300;
+	color: black;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ff9933;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	/* background-color: rgba(255,255,255,0.2); */
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	/* color: #ffffff; */
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #ff9933;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+.footerr {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px; /* Adjust padding as needed */
+}
+
+#left, #right {
+  margin: 0; /* Reset default margin */
+}
+
+@media (max-width: 600px) {
+  .footer {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #left, #right {
+      margin: 10px 0; /* Adjust margin for smaller screens */
+      text-align: center; /* Center text for smaller screens */
+  }
+}
+/* whtasaap logo */
+.whatsapp-button {
+	position: fixed;
+	bottom: 80px; 
+	right: 30px; 
+	z-index: 1000; 
+  }
+  
+  .whatsapp-button img {
+	cursor: pointer;
+	transition: transform 0.3s ease;
+  }
+  
+  .whatsapp-button img:hover {
+	transform: scale(1.1);
+  }
+  
+
+/* Part Popper Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 20% auto;
+  padding: 50px;
+  border: 1px solid #888;
+  width: 50%;
+  height: auto;
+  position: relative;
+  animation-name: modalopen;
+  animation-duration: 1s;
+  border-radius: 10px;
+}
+
+.close {
+  color: #d93636;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 80%; /* Adjust width for smaller screens */
+    margin: 10% auto; /* Adjust margin for smaller screens */
+    padding: 30px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 90%; /* Adjust width for even smaller screens */
+    margin: 20% auto; /* Adjust margin for even smaller screens */
+    padding: 20px; /* Adjust padding for even smaller screens */
+  }
+}
